@@ -1,0 +1,20 @@
+@import '../../../styles/setting.scss';
+.link-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: $black;
+	transition: 0.3s ease-in-out;
+	z-index: 1;
+	span {
+		position: relative;
+		left: 0;
+		transition: left 0.3s ease-in-out;
+	}
+	&:hover {
+		color: $orange;
+		span {
+			left: -5px;
+		}
+	}
+}

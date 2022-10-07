@@ -1,0 +1,45 @@
+@import './font.scss';
+
+$white: #fff;
+
+$neutral-50: #747778;
+$neutral-20: #2d3132;
+
+$green-20: #00382f;
+$green-95: #b4fff0;
+
+$orange: #ff5449;
+
+$purple: #bac6ea;
+
+$black: #0f1a34;
+
+$blueLight: #5acaf4;
+$blue: #cbdcff;
+
+$linearGreen: linear-gradient(127.62deg, #23a071 -70.27%, #74c269 55.51%);
+$linearRed: linear-gradient(232.38deg, #ef4547 15.53%, #c7156e 169.58%);
+$linearOrange: linear-gradient(270deg, #fce006 19.24%, #f99b1c 257.3%);
+
+$mainFont: 'Noto Sans', sans-serif;
+
+.btn {
+	padding: 7px 10px;
+	border-radius: 5px;
+
+	border: 1px solid $orange;
+	background: none;
+	color: $white;
+
+	cursor: pointer;
+
+	transition: 0.3s ease-in-out;
+	&:hover {
+		background: $orange;
+	}
+}
+@mixin defaultBlock {
+}
+
+@mixin resetOutline {
+}

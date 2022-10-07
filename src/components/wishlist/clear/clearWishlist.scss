@@ -1,0 +1,22 @@
+@import '../../../styles/setting.scss';
+
+.clear-wishlist {
+	margin-bottom: 20px;
+	text-align: center;
+	svg {
+		width: 30px;
+		position: relative;
+		top: -1px;
+		path {
+			fill: $orange;
+		}
+	}
+	.btn-clear {
+		font-size: 15px;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+		&:hover {
+			color: $orange;
+		}
+	}
+}

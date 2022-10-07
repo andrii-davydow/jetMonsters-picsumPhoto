@@ -1,0 +1,8 @@
+@import '../../styles/setting.scss';
+.photos-content {
+	.photos-flex {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

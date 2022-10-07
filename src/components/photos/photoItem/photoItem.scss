@@ -1,0 +1,119 @@
+@import '../../../styles/setting.scss';
+.photo-item {
+	position: relative;
+	margin-bottom: 10px;
+	width: calc(50% - 5px);
+	height: 500px;
+	&:hover {
+		.photo-link {
+			&:before {
+				height: 100%;
+			}
+		}
+		.btn-wishlist {
+			top: 20px;
+			opacity: 1;
+		}
+
+		.photo-author {
+			bottom: 20px;
+			opacity: 1;
+		}
+	}
+
+	.preload-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background: $blue;
+		background: url('./loader.gif');
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.photo-link {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		cursor: nesw-resize;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0;
+			background: rgba(0, 0, 0, 0.5);
+			transition: 0.3s ease-in-out;
+			z-index: 1;
+		}
+	}
+	.photo-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.photo-author {
+		position: absolute;
+		margin: 0;
+		bottom: 0;
+		left: 20px;
+		opacity: 0;
+		color: #fff;
+		transition: 0.3s ease-in-out;
+		z-index: 2;
+	}
+
+	.btn-wishlist {
+		position: absolute;
+		top: 0;
+		right: 20px;
+
+		background: $orange;
+		border: none;
+
+		transition: 0.3s ease-in-out;
+
+		z-index: 2;
+
+		opacity: 0;
+
+		&:hover {
+			background: $blueLight;
+		}
+		&.active-wishlist {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.photo-item {
+		height: 200px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.photo-item {
+		width: 100%;
+		height: 200px;
+		.photo-link {
+			&:before {
+				height: 100%;
+				opacity: 0.5;
+			}
+		}
+		.photo-author {
+			opacity: 1;
+			bottom: 20px;
+		}
+		.btn-wishlist {
+			opacity: 1;
+			top: 10px !important;
+			right: 10px;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+@import '../../styles/setting.scss';
+
+.pagination-list {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin: 30px 0;
+
+	li {
+		margin: 0 10px;
+		&:not(.break) {
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				width: 40px;
+				height: 40px;
+
+				font-size: 13px;
+
+				border: 2px solid $blue;
+				border-radius: 40px;
+
+				cursor: pointer;
+
+				transition: 0.3s ease-in-out;
+
+				&:hover {
+					border-color: $blueLight;
+				}
+			}
+		}
+		&.selected {
+			a {
+				background: $blueLight;
+				border-color: $blueLight;
+				color: $white;
+			}
+		}
+
+		&.disabled {
+			a {
+				cursor: default;
+				pointer-events: none;
+				opacity: 0.3;
+				&:hover {
+					border-color: $blue;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.pagination-list {
+		margin: 20px 0;
+		.previous,
+		.next {
+			display: none;
+		}
+		li {
+			margin: 0 5px;
+			&:not(.break) {
+				a {
+					width: 35px;
+					height: 35px;
+				}
+			}
+		}
+	}
+}
